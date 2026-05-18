@@ -1,0 +1,31 @@
+Here is the final, locked-in lineup of your 6 Verilog architectures:
+
+1. The Naive Baseline (Direct Form)
+Concept: The tutorial code.
+
+Metrics: Terrible $F_{max}$, high power, high area.
+
+2. The Pipelined Baseline (Speed Focus)
+Concept: Adding flip-flops between the multiplier and adder stages of the Baseline.
+
+Metrics: Massive $F_{max}$ boost, lower dynamic power (due to reduced glitching), but higher FF area.
+
+3. The Symmetric Architecture (DSP Math Focus)
+Concept: Adding mirrored taps before multiplying (the classic DSP trick).
+
+Metrics: DSP slices cut in half, massive area and static power savings.
+
+4. The Fully Serial MAC (Extreme Area Focus)
+Concept: A single multiplier and adder looped 8 times with a state machine (Time-Multiplexed).
+
+Metrics: Almost zero area, but terrible latency and throughput (takes 8 clocks per sample).
+
+5. The Multiplier-less CSD (Extreme Power Focus)
+Concept: Replacing all DSP multipliers with hardwired bit-shifts (Canonic Signed Digit).
+
+Metrics: Zero DSP slices used. The absolute lowest dynamic power possible while maintaining 1-cycle throughput.
+
+6. The "Hybrid" (The Thesis Conclusion)
+Concept: You combine Symmetry + CSD Bit-Shifting + Pipelining.
+
+Metrics: This will be the ultimate winner. It uses 0 DSP slices (CSD), cuts the adder tree in half (Symmetry), and hits a massive clock speed (Pipelining).

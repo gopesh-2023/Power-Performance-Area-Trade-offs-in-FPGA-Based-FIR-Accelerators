@@ -1,0 +1,2 @@
+Architecture,LUTs,FFs,DSPs,Fmax_MHz,Static_Power_W,Dynamic_Power_W,MSE
+Baseline,0,80,7,110.8,0.131,0.042,7e-06
